@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Программы тренировок</title>
+		<link rel="stylesheet" href="../styles/program.css" />
+		<link rel="icon" href="../img/favicon.svg" type="image/svg+xml" />
+	</head>
+	<body>
+		<header>
+			<div class="logo">
+				<img src="../img/logo.svg" alt="Логотип" style="height: 50px" />
+			</div>
+			<nav class="header-text">
+				<a href="../main_pages/index.html">Главная</a>
+				<a href="../main_pages/program.html">Программы тренировок</a>
+				<a href="../main_pages/catalog.html">Каталог</a>
+				<a href="../main_pages/about.html">О нас</a>
+			</nav>
+		</header>
+
+		<main>
+			<label for="program-select">Выберите программу тренировок:</label>
+			<select id="program-select" onchange="showProgramDetails()">
+				<option value="">-- Выберите --</option>
+				<option value="1">Подростки</option>
+				<option value="2">Мужчины</option>
+				<option value="3">Девушки</option>
+				<option value="4">Женщины</option>
+			</select>
+
+			<div
+				id="program-details"
+				class="program-details"
+				style="display: none"
+			></div>
+			<img
+				src="#"
+				id="program-image"
+				class="program-image"
+				alt="Пример тренировки"
+			/>
+		</main>
+
+		<footer>
+			<p>Контактный телефон: +375 (29) 608-38-11</p>
+		</footer>
+
+		<script src="../scripts/program.js"></script>
+	</body>
+</html>
