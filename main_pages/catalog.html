@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Каталог</title>
+		<link rel="stylesheet" href="../styles/catalog.css" />
+		<link rel="icon" href="../img/favicon.svg" type="image/svg+xml" />
+	</head>
+	<body>
+		<header>
+			<div class="logo">
+				<img src="../img/logo.svg" alt="Логотип" style="height: 50px" />
+			</div>
+			<nav class="header-text">
+				<a href="../main_pages/index.html">Главная</a>
+				<a href="../main_pages/program.html">Программы тренировок</a>
+				<a href="../main_pages/catalog.html">Каталог</a>
+				<a href="../main_pages/about.html">О нас</a>
+			</nav>
+		</header>
+
+		<main>
+			<h1>Каталог продуктов</h1>
+
+			<div class="menu">
+				<button onclick="showProducts('tshirts')">Футболки</button>
+				<button onclick="showProducts('shorts')">Шорты</button>
+				<button onclick="showProducts('sneakers')">Кроссовки</button>
+				<button onclick="showProducts('supplements')">Добавки</button>
+			</div>
+
+			<div id="tshirts" class="product-list">
+				<h2>Майки</h2>
+				<div class="product">
+					<div class="product-name">Футболка мужская Nike</div>
+					<img src="../img/t-shirt1.jpg" alt="Майка 1" />
+					<div class="product-price">Цена: 25.00 BYN</div>
+				</div>
+				<div class="product">
+					<div class="product-name">Футболка мужская Adidas</div>
+					<img src="../img/t-shirt2.jpg" alt="Майка 2" />
+					<div class="product-price">Цена: 30.00 BYN</div>
+				</div>
+				<div class="product">
+					<div class="product-name">Футболка мужская Puma</div>
+					<img src="../img/t-shirt3.jpg" alt="Майка 3" />
+					<div class="product-price">Цена: 28.00 BYN</div>
+				</div>
+			</div>
+
+			<div id="shorts" class="product-list">
+				<h2>Шорты</h2>
+				<div class="product">
+					<div class="product-name">Шорты мужские Nike</div>
+					<img src="../img/shorts1.jpg" alt="Шорты 1" />
+					<div class="product-price">Цена: 35.00 BYN</div>
+				</div>
+				<div class="product">
+					<div class="product-name">Шорты мужские Adidas</div>
+					<img src="../img/shorts2.jpg" alt="Шорты 2" />
+					<div class="product-price">Цена: 40.00 BYN</div>
+				</div>
+				<div class="product">
+					<div class="product-name">Шорты мужские Puma</div>
+					<img src="../img/shorts3.jpg" alt="Шорты 3" />
+					<div class="product-price">Цена: 38.00 BYN</div>
+				</div>
+			</div>
+
+			<div id="sneakers" class="product-list">
+				<h2>Кроссовки</h2>
+				<div class="product">
+					<div class="product-name">Кроссовки для бега Nike</div>
+					<img src="../img/sneakers1.jpg" alt="Кроссовки 1" />
+					<div class="product-price">Цена: 100.00 BYN</div>
+				</div>
+				<div class="product">
+					<div class="product-name">Кроссовки для бега Adidas</div>
+					<img src="../img/sneakers2.jpg" alt="Кроссовки 2" />
+					<div class="product-price">Цена: 120.00 BYN</div>
+				</div>
+				<div class="product">
+					<div class="product-name">Кроссовки для бега Puma</div>
+					<img src="../img/sneakers3.jpg" alt="Кроссовки 3" />
+					<div class="product-price">Цена: 110.00 BYN</div>
+				</div>
+			</div>
+
+			<div id="supplements" class="product-list">
+				<h2>Добавки</h2>
+				<div class="product">
+					<div class="product-name">Whey Protein Professional</div>
+					<img src="../img/supplement1.jpg" alt="Добавка 1" />
+					<div class="product-price">Цена: 150.00 BYN</div>
+				</div>
+				<div class="product">
+					<div class="product-name">GOLD CREATINE от Kevin Levrone</div>
+					<img src="../img/supplement2.jpg" alt="Добавка 2" />
+					<div class="product-price">Цена: 155.00 BYN</div>
+				</div>
+				<div class="product">
+					<div class="product-name">BCAA 1000</div>
+					<img src="../img/supplement3.jpg" alt="Добавка 3" />
+					<div class="product-price">Цена: 152.00 BYN</div>
+				</div>
+			</div>
+
+			<button class="request-button" onclick="toggleModal('block')">
+				Оставить заявку
+			</button>
+
+			<div id="myModal" class="modal">
+				<div class="modal-content">
+					<span class="close" onclick="toggleModal('none')">&times;</span>
+					<input type="text" id="name" placeholder="Имя" required />
+					<input type="text" id="surname" placeholder="Фамилия" required />
+					<input type="tel" id="phone" placeholder="Номер телефона" required />
+					<button class="order" onclick="submitRequest()">
+						Оставить заявку
+					</button>
+				</div>
+			</div>
+		</main>
+
+		<footer>
+			<p>Контактный телефон: +375 (29) 608-38-11</p>
+		</footer>
+
+		<script src="../scripts/catalog.js"></script>
+	</body>
+</html>
